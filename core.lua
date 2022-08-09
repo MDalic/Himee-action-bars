@@ -2,14 +2,13 @@ local f = CreateFrame("Frame")
 f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:SetScript("OnEvent",function(self,event,...)
     menuTextures = {MainMenuBarTexture0,MainMenuBarTexture1,MainMenuBarTexture2,MainMenuBarTexture3,MainMenuBarPageNumber,MainMenuMaxLevelBar3,MainMenuMaxLevelBar2,MainMenuMaxLevelBar1,MainMenuMaxLevelBar0,MainMenuBarLeftEndCap,MainMenuBarRightEndCap,ActionBarUpButton,ActionBarDownButton,MainMenuBarBackpackButton,CharacterBag0Slot,CharacterBag1Slot,CharacterBag2Slot,CharacterBag3Slot,MainMenuBarArtFrame.LeftEndCap,MainMenuBarArtFrame.RightEndCap,MainMenuBarArtFrameBackground,MicroButtonAndBagsBar,MainMenuBarArtFrame.PageNumber}
-    anchorClear = {ActionButton1,CharacterMicroButton,MainMenuBarBackpackButton,ActionBarUpButton,ActionBarDownButton,MultiBarBottomRightButton1,MultiBarBottomLeftButton1,MainMenuBar,StanceBarFrame,KeyRingButton,ShapeshiftBarFrame}
+    anchorClear = {ActionButton1,CharacterMicroButton,MainMenuBarBackpackButton,ActionBarUpButton,ActionBarDownButton,MultiBarBottomRightButton1,MultiBarBottomLeftButton1,MainMenuBar,StanceBarFrame,KeyRingButton,ShapeshiftBarFrame,PetActionButton1}
     retailFixAnchorClear = {MultiBarBottomRightButton7,MultiBarBottomRightButton8,MultiBarBottomRightButton9,MultiBarBottomRightButton10,MultiBarBottomRightButton11,MultiBarBottomRightButton12}
     for k,v in pairs(menuTextures)do 
         if v~=nil then
             v:Hide()
         end
     end
-    
     for k,v in pairs(anchorClear)do
         v:ClearAllPoints()
     end
@@ -25,6 +24,7 @@ f:SetScript("OnEvent",function(self,event,...)
     MultiBarBottomRightButton1:SetPoint("TOP",ActionButton1,"BOTTOM",0,-10)
     MultiBarBottomLeftButton1:SetPoint("BOTTOM",ActionButton1,"TOP",0,10)
     MainMenuBar:SetPoint("CENTER",ParentUI,"BOTTOM",0,-13)
+    PetActionButton1:SetPoint("BOTTOM",MultiBarBottomLeftButton1,"TOP",0,5)
     if KeyRingButton ~= nil then
         KeyRingButton:SetScale(0.88)
         KeyRingButton:SetWidth(25)
