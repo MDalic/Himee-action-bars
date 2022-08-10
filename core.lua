@@ -18,11 +18,11 @@ f:SetScript("OnEvent",function(self,event,...)
         end
     end
     --everything is anchored to ActionButton1, ActionButton1 is anchored to the MainMenuBar which is anchored to the bottom of the screen
-    ActionButton1:SetPoint("BOTTOM",MainMenuBar,"TOP",-248,50)
+    ActionButton1:SetPoint("BOTTOM",MainMenuBar,"TOP",-248,45)
     CharacterMicroButton:SetPoint("LEFT",MultiBarBottomRightButton12,"RIGHT",25,7)
     MainMenuBarBackpackButton:SetPoint("BOTTOM",HelpMicroButton,"TOP",-7,-15)
-    MultiBarBottomRightButton1:SetPoint("TOP",ActionButton1,"BOTTOM",0,-10)
-    MultiBarBottomLeftButton1:SetPoint("BOTTOM",ActionButton1,"TOP",0,10)
+    MultiBarBottomRightButton1:SetPoint("TOP",ActionButton1,"BOTTOM",0,-5)
+    MultiBarBottomLeftButton1:SetPoint("BOTTOM",ActionButton1,"TOP",0,5)
     MainMenuBar:SetPoint("CENTER",ParentUI,"BOTTOM",0,-13)
     PetActionButton1:SetPoint("BOTTOM",MultiBarBottomLeftButton1,"TOP",0,5)
     if KeyRingButton ~= nil then
