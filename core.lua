@@ -4,6 +4,7 @@ f:SetScript("OnEvent",function(self,event,...)
     menuTextures = {MainMenuBarTexture0,MainMenuBarTexture1,MainMenuBarTexture2,MainMenuBarTexture3,MainMenuBarPageNumber,MainMenuMaxLevelBar3,MainMenuMaxLevelBar2,MainMenuMaxLevelBar1,MainMenuMaxLevelBar0,MainMenuBarLeftEndCap,MainMenuBarRightEndCap,ActionBarUpButton,ActionBarDownButton,MainMenuBarBackpackButton,CharacterBag0Slot,CharacterBag1Slot,CharacterBag2Slot,CharacterBag3Slot,MainMenuBarArtFrame.LeftEndCap,MainMenuBarArtFrame.RightEndCap,MainMenuBarArtFrameBackground,MicroButtonAndBagsBar,MainMenuBarArtFrame.PageNumber}
     anchorClear = {ActionButton1,CharacterMicroButton,MainMenuBarBackpackButton,ActionBarUpButton,ActionBarDownButton,MultiBarBottomRightButton1,MultiBarBottomLeftButton1,MainMenuBar,StanceBarFrame,KeyRingButton,ShapeshiftBarFrame,PetActionButton1}
     retailFixAnchorClear = {MultiBarBottomRightButton7,MultiBarBottomRightButton8,MultiBarBottomRightButton9,MultiBarBottomRightButton10,MultiBarBottomRightButton11,MultiBarBottomRightButton12}
+    stances = {StanceButton1,StanceButton2,StanceButton3,StanceButton4,StanceButton5}
     for k,v in pairs(menuTextures)do 
         if v~=nil then
             v:Hide()
@@ -31,10 +32,15 @@ f:SetScript("OnEvent",function(self,event,...)
         KeyRingButton:SetPoint("RIGHT",CharacterMicroButton,"LEFT",1,-12)
     end
     if StanceBarFrame ~= nil then
-        StanceBarFrame:SetPoint("LEFT",ParentUI,"LEFT",-10000,0)
+        StanceBarFrame:SetPoint("LEFT",ParentUI,"LEFT",1123,0)
+        for k,v in pairs(stances)do 
+            if v~=nil then
+                v:SetAlpha(0)
+            end
+        end
     end
     if ShapeshiftBarFrame ~= nil then
-        ShapeshiftBarFrame:SetPoint("LEFT",ParentUI,"LEFT",-10000,0)
+        ShapeshiftBarFrame:SetPoint("LEFT",ParentUI,"LEFT",1123,0)
     end
     if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
         MultiBarBottomRightButton7:SetPoint("LEFT",MultiBarBottomRightButton6,"RIGHT",6,0)
