@@ -31,7 +31,7 @@ f:SetScript("OnEvent",function(self,event,...)
         KeyRingButton:SetPoint("RIGHT",CharacterMicroButton,"LEFT",1,-12)
     end
     if StanceBarFrame ~= nil then
-        StanceBarFrame:SetPoint("LEFT",ParentUI,"LEFT",1112,0)
+        StanceBarFrame:SetPoint("LEFT",ParentUI,"LEFT",-10000,0)
     end
     if ShapeshiftBarFrame ~= nil then
         ShapeshiftBarFrame:SetPoint("LEFT",ParentUI,"LEFT",-10000,0)
@@ -45,8 +45,3 @@ f:SetScript("OnEvent",function(self,event,...)
         MultiBarBottomRightButton12:SetPoint("LEFT",MultiBarBottomRightButton11,"RIGHT",6,0)
     end
 end)
-if StanceBarFrame ~= nil then
-    hooksecurefunc(StanceBarFrame,"Show",function(self)
-        self:Hide()
-    end)
-end
