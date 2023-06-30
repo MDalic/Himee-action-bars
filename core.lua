@@ -1,7 +1,6 @@
 local f = CreateFrame("Frame")
 f:RegisterEvent("PLAYER_ENTERING_WORLD")
 f:SetScript("OnEvent",function(self,event,...)
-    DEFAULT_CHAT_FRAME:AddMessage(event)
     menuTextures = {MainMenuBarTexture0,MainMenuBarTexture1,MainMenuBarTexture2,MainMenuBarTexture3,MainMenuBarPageNumber,MainMenuMaxLevelBar3,MainMenuMaxLevelBar2,MainMenuMaxLevelBar1,MainMenuMaxLevelBar0,MainMenuBarLeftEndCap,MainMenuBarRightEndCap,ActionBarUpButton,ActionBarDownButton,MainMenuBarBackpackButton,CharacterBag0Slot,CharacterBag1Slot,CharacterBag2Slot,CharacterBag3Slot,MainMenuBarArtFrame.LeftEndCap,MainMenuBarArtFrame.RightEndCap,MainMenuBarArtFrameBackground,MicroButtonAndBagsBar,MainMenuBarArtFrame.PageNumber}
     anchorClear = {ActionButton1,CharacterMicroButton,MainMenuBarBackpackButton,ActionBarUpButton,ActionBarDownButton,MultiBarBottomRightButton1,MultiBarBottomLeftButton1,MainMenuBar,StanceBarFrame,KeyRingButton,ShapeshiftBarFrame,PetActionButton1,PetActionButton2,PetActionButton3,PetActionButton4,PetActionButton5,PetActionButton6,PetActionButton7,PetActionButton8,PetActionButton9,PetActionButton10}
     retailFixAnchorClear = {MultiBarBottomRightButton7,MultiBarBottomRightButton8,MultiBarBottomRightButton9,MultiBarBottomRightButton10,MultiBarBottomRightButton11,MultiBarBottomRightButton12}
