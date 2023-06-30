@@ -21,8 +21,7 @@ f:SetScript("OnEvent",function(self,event,...)
     end
     PetActionButton1:SetPoint("RIGHT",MultiBarLeftButton1,"LEFT",-5,2)
     for k,v in pairs(petActionBars)do
-        DEFAULT_CHAT_FRAME:AddMessage((-35*tonumber(k)))
-            v:SetPoint("TOP",PetActionButton1,"BOTTOM",0,(-35*tonumber(k-1)-5))
+        v:SetPoint("TOP",PetActionButton1,"BOTTOM",0,(-35*tonumber(k-1)-5))
     end
     --everything is anchored to ActionButton1, ActionButton1 is anchored to the MainMenuBar which is anchored to the bottom of the screen
     ActionButton1:SetPoint("BOTTOM",MainMenuBar,"TOP",-231,45)
